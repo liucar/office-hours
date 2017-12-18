@@ -1,4 +1,5 @@
-An office hour simulator that models a professor meeting students during office hours. The driver program will run 100 office hour simulations. It uses a priority queue to model students standing in line and a multimap to store student names and their topics.
+# Office Hours
+An office hour simulator that models a professor meeting students during office hours. The driver program will run 100 office hour simulations. The program loops the office hour simulation 100 times. Every student is randomly assigned a name from “names.txt” (10 names) and a random topic from “topics.txt” (10 topics). It uses a priority queue to model students standing in line and a multimap to store student names and their topics.
 
 ## Contents:
 
@@ -9,26 +10,14 @@ An office hour simulator that models a professor meeting students during office 
 	*  names.txt
 	*  README.txt
 
-## How to Run:
+## Console Output:
 
-	1. Compile the program using your compiler (making sure that
-	   “topics.txt” and “names.txt” is in the same directory)
-
-	2. Run the driver program in the command prompt or IDE
-
-	3. The program loops the office hour simulation 100 times. 
-	   Every student is randomly assigned a name from
-	   “names.txt” (10 names) and a random topic from “topics.txt”
-           (10 topics). 
-
-	4. The following are output to console:
-
-	   Every minute (modeled as 1 second in time):
+**Every minute (modeled as 1 second in time):**
 		* If a meeting is in session (0 for False, 1 for True)
 		* Number of students in line
 		* A timer keeping track of minutes elapsed
 
-	   Alerts:
+**Alerts:**
 		* New Arrival *
 			- Student’s service rate (minutes)
 			- Student’s arrival probability (percentage)
@@ -41,40 +30,42 @@ An office hour simulator that models a professor meeting students during office 
 			- Student’s urgency
 			- Student’s topic
 
-	   End of every office hour:
+**End of every office hour:**
 		* Total number of students served
 		* Sum of all wait times
 		* Sum of all meeting times
 		* Minutes professor stayed past hour
 		* A dividing line “—————————————“
 
-	   End of 100 simulations:
+**End of 100 simulations:**
 		* Average student wait time
 		* Average student meet time
 		* Average professor overtime
 
 	   
-	5. The following reports are generated:
+## Reports Generated:
 
-	   “report.txt” - Logs every time a student goes to office hours
-			  (Name, Topic, OH#) and at the end, calculates 
-			  total number of office hour visits
+**“report.txt”** 
+Logs every time a student goes to office hours
+(Name, Topic, OH#) and at the end, calculates 
+total number of office hour visits
 
-	   “sorted.txt” - Sort function results. To use sort function:
+**“sorted.txt”** 
+Sort function results. To use sort function:
 			  
 			  sort(“report.txt”, 
 				“studentName” or “questionTopic”, 
 				“ascending” or “descending”);
 
-	   “search.txt” - Search function results. To use 
-			  search function:
+**“search.txt”** 
+Search function results. To use search function:
 			  
 			   search(“report.txt”, 
 				  studentName” or “questionTopic”, 
 				  desired name or topic as a string);
 	   
 
-## Usage Notes:
+## Notes:
 
 -   Office hours run for 1 hour (modeled as 1 minute in time).
 	   No new arrivals occur after 1 hour, but the simulation can 
