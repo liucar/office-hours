@@ -13,22 +13,26 @@ An office hour simulator that models a professor meeting students during office 
 ## Console Output:
 
 **Every minute (modeled as 1 second in time):**
+```
 - If a meeting is in session (0 for False, 1 for True)
 - Number of students in line
 - A timer keeping track of minutes elapsed
+```
 
 **Alerts:**
-		* New Arrival *
-			- Student’s service rate (minutes)
-			- Student’s arrival probability (percentage)
-			- Student’s urgency (1-3, 3 being top priority)
-			- Student’s topic (from “topics.txt”)
+```
+* New Arrival *
+- Student’s service rate (minutes)
+- Student’s arrival probability (percentage)
+- Student’s urgency (1-3, 3 being top priority)
+- Student’s topic (from “topics.txt”)
 
-		** New Student Meeting **
-			- Student’s wait (minutes)
-			- Student’s service rate
-			- Student’s urgency
-			- Student’s topic
+** New Student Meeting **
+- Student’s wait (minutes)
+- Student’s service rate
+- Student’s urgency
+- Student’s topic
+```
 
 **End of every office hour:**
 		* Total number of students served
