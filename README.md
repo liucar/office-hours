@@ -3,19 +3,19 @@ An office hour simulator that models a professor meeting students during office 
 
 ## Contents:
 
-	*  office_hours_driver.cpp
-	*  office_hours.h
-	*  office_hours.cpp
-	*  topics.txt
-	*  names.txt
-	*  README.txt
+- office_hours_driver.cpp
+- office_hours.h
+- office_hours.cpp
+- topics.txt
+- names.txt
+- README.txt
 
 ## Console Output:
 
 **Every minute (modeled as 1 second in time):**
-		* If a meeting is in session (0 for False, 1 for True)
-		* Number of students in line
-		* A timer keeping track of minutes elapsed
+- If a meeting is in session (0 for False, 1 for True)
+- Number of students in line
+- A timer keeping track of minutes elapsed
 
 **Alerts:**
 		* New Arrival *
