@@ -1,5 +1,5 @@
 # Office Hours
-An office hour simulator that models a professor meeting students during office hours. The driver program will run 100 office hour simulations. The program loops the office hour simulation 100 times. Every student is randomly assigned a name from “names.txt” (10 names) and a random topic from “topics.txt” (10 topics). It uses a priority queue to model students standing in line and a multimap to store student names and their topics.
+An office hour simulator that models a professor meeting students during office hours. The driver program will run 100 office hour simulations. Every student is randomly assigned a name from “names.txt” (10 names) and a random topic from “topics.txt” (10 topics). It uses a priority queue to model students standing in line and a multimap to store student names and their topics.
 
 ## Contents:
 
