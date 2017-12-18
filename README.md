@@ -35,16 +35,20 @@ An office hour simulator that models a professor meeting students during office 
 ```
 
 **End of every office hour:**
-		* Total number of students served
-		* Sum of all wait times
-		* Sum of all meeting times
-		* Minutes professor stayed past hour
-		* A dividing line “—————————————“
+```
+-Total number of students served
+-Sum of all wait times
+-Sum of all meeting times
+-Minutes professor stayed past hour
+-A dividing line “—————————————“
+```
 
 **End of 100 simulations:**
-		* Average student wait time
-		* Average student meet time
-		* Average professor overtime
+```
+- Average student wait time
+- Average student meet time
+- Average professor overtime
+```
 
 	   
 ## Reports Generated:
