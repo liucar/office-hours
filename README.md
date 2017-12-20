@@ -1,6 +1,4 @@
 # Office Hours
-An office hour simulator that models a professor meeting students during office hours. The driver program will run 100 office hour simulations. Every student is randomly assigned a name from “names.txt” (10 names) and a random topic from “topics.txt” (10 topics). It uses a priority queue to model students standing in line and a multimap to store student names and their topics.
-
 ## Contents:
 
 - office_hours_driver.cpp
@@ -10,13 +8,34 @@ An office hour simulator that models a professor meeting students during office 
 - names.txt
 - README.txt
 
+## Overview:
+A program that models a professor meeting with students during office hours. Students arrive randomly and stand in line to meet with the professor. The professor meets with each student individually while the other students wait. The program uses a priority queue to 
+represent students waiting in line, with students having higher question urgency being met with first. A multimap stores the names of the students who have finished meeting with the professor and their respective question topics. 
+
+The driver program will run 100 office hour simulations and analyze the data from these simulations. 
+
+## Time Representation:
+Office hours run for 1 hour, which is represented by 1 minute in real time. It follows that 1 minute in the simulation is actually
+1 second in real time. No new arrivals occur after 1 hour, but the simulation can go over 1 hour if there are 
+still students waiting to meet with the professor or a meeting is still in session. The office hour will run until there are no more students waiting in line. 
+
+## Student Representation:
+- Every student is randomly assigned a:
+	* name from “names.txt” (10 names)
+	* topic from “topics.txt” (10 topics) 
+	* probability of arrival, which is between [0%, 20%)
+	* meeting duration, which is a random integer between 5 to 20 min
+	* question urgency between 1 to 3, where 3 is this highest priority and will be met with first
+	(However, the student will not interrupt a lower
+	   priority meeting already in session.)
+
 ## Console Output:
 
 **Every minute (modeled as 1 second in time):**
 ```
 - If a meeting is in session (0 for False, 1 for True)
 - Number of students in line
-- A timer keeping track of minutes elapsed
+- A timer keeping track of "minutes" elapsed
 ```
 
 **Alerts:**
@@ -28,13 +47,13 @@ An office hour simulator that models a professor meeting students during office 
 - Student’s topic (from “topics.txt”)
 
 ** New Student Meeting **
-- Student’s wait (minutes)
+- Student’s wait (calculated in minutes)
 - Student’s service rate
 - Student’s urgency
 - Student’s topic
 ```
 
-**End of every office hour:**
+**At the end of every office hour:**
 ```
 -Total number of students served
 -Sum of all wait times
@@ -43,7 +62,7 @@ An office hour simulator that models a professor meeting students during office 
 -A dividing line “—————————————“
 ```
 
-**End of 100 simulations:**
+**At the end of 100 simulations:**
 ```
 - Average student wait time
 - Average student meet time
@@ -55,38 +74,31 @@ An office hour simulator that models a professor meeting students during office 
 
 **“report.txt”** 
 Logs every time a student goes to office hours
-(Name, Topic, OH#) and at the end, calculates 
-total number of office hour visits
+and their topic (Name, Topic, OH#).
+
+At the end, it calculates the 
+total number of office hour visits for each student
 
 **“sorted.txt”** 
-Sort function results. To use sort function:
+Sorts the report by either student name or topic in either ascending or descending alphabetical order. 
+
+To use sort function:
 			  
 			  sort(“report.txt”, 
 				“studentName” or “questionTopic”, 
 				“ascending” or “descending”);
 
 **“search.txt”** 
-Search function results. To use search function:
+Searches the report for all entries containing a desired name or topic. 
+
+To use search function:
 			  
 			   search(“report.txt”, 
 				  studentName” or “questionTopic”, 
 				  desired name or topic as a string);
 	   
 
-## Notes:
+## Output:
 
--   Office hours run for 1 hour (modeled as 1 minute in time).
-	   No new arrivals occur after 1 hour, but the simulation can 
-	   go overtime if there are still students waiting to meet 
-	   with the professor. The professor will stay until there 
-	   are no more students.
-	
--  Service rate is a random integer between 5 to 20 min
-
-- Probability of arrival is randomly between [0%, 20%)
-
-- Urgency is randomly between 1 to 3. Students with 
-	   questions of urgency 3 will be met with first, then 2’s,
-	   and then 1’s. (However, they will not interrupt a lower
-	   priority meeting already in session.)
+![alt text](https://user-images.githubusercontent.com/34634457/34194519-ed0eda8e-e50d-11e7-8026-9ec3ed83c929.png)
 
