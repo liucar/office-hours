@@ -12,7 +12,7 @@
 A program that models a professor meeting with students during office hours. Students arrive randomly and stand in line to meet with the professor. The professor meets with each student individually while the other students wait. The program uses a priority queue to 
 represent students waiting in line, with students having higher question urgency being met with first. A multimap stores the names of the students who have finished meeting with the professor and their respective question topics. 
 
-The driver program will run 100 office hour simulations and analyze the data from these simulations. 
+The driver program will run 100 office hour simulations and generate various analytical reports from the data collected from these office hours. 
 
 ## Time Representation:
 Office hours run for 1 hour, which is represented by 1 minute in real time. It follows that 1 minute in the simulation is actually
@@ -47,7 +47,7 @@ still students waiting to meet with the professor or a meeting is still in sessi
 - Student’s topic (from “topics.txt”)
 
 ** New Student Meeting **
-- Student’s wait (calculated in minutes)
+- Student’s wait (meeting start time - time of arrival)
 - Student’s service rate
 - Student’s urgency
 - Student’s topic
@@ -73,25 +73,29 @@ still students waiting to meet with the professor or a meeting is still in sessi
 ## Reports Generated:
 
 **“report.txt”** 
-Logs every time a student goes to office hours
-and their topic (Name, Topic, OH#).
+- Logs every time a student goes to office hours
+and their topic 
 
-At the end, it calculates the 
-total number of office hour visits for each student
+- Entry contains: 
+
+			Name, Topic, OH#
+
+- At the end, the 
+total number of office hour visits for each student is calculated
 
 **“sorted.txt”** 
-Sorts the report by either student name or topic in either ascending or descending alphabetical order. 
+- Sorts the report entries by either student name or topic in either ascending or descending alphabetical order. 
 
-To use sort function:
+- To use sort function:
 			  
 			  sort(“report.txt”, 
 				“studentName” or “questionTopic”, 
 				“ascending” or “descending”);
 
 **“search.txt”** 
-Searches the report for all entries containing a desired name or topic. 
+- Searches the report for all entries containing a desired name or topic. 
 
-To use search function:
+- To use search function:
 			  
 			   search(“report.txt”, 
 				  studentName” or “questionTopic”, 
@@ -99,6 +103,15 @@ To use search function:
 	   
 
 ## Output:
+**Console:**
+![alt text](https://user-images.githubusercontent.com/34634457/34197209-47c85de0-e51a-11e7-9523-f4af9bcbe7dd.png)
 
-![alt text](https://user-images.githubusercontent.com/34634457/34194519-ed0eda8e-e50d-11e7-8026-9ec3ed83c929.png)
+**Report/Averages:**
+![alt text](https://user-images.githubusercontent.com/34634457/34197291-a8e22cdc-e51a-11e7-81ff-25f16dbddd0b.png)
+
+**Sorting:**
+![alt text](https://user-images.githubusercontent.com/34634457/34197294-ac5d1d04-e51a-11e7-8645-b6d5d9aa4292.png)
+
+**Searching:**
+![alt text](https://user-images.githubusercontent.com/34634457/34196115-835be87c-e515-11e7-8125-6a5fcbf1a3e4.png)
 
