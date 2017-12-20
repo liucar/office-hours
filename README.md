@@ -76,7 +76,7 @@ still students waiting to meet with the professor or a meeting is still in sessi
 - Logs every time a student goes to office hours
 and their topic 
 
-- Entry contains: 
+- An entry contains: 
 
 			Name, Topic, OH#
 
